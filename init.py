@@ -1,5 +1,4 @@
 import kitsu
-import query
 
 client = kitsu.KitsuClient()
 args = {

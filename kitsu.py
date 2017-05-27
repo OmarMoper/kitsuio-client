@@ -1,5 +1,7 @@
 import http.client
-import query
+
+from utils import query
+
 
 class KitsuClient():
 
