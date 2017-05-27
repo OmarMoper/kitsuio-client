@@ -1,3 +1,4 @@
+"""Basic example about how to use kitsu client."""
 import kitsu
 
 client = kitsu.KitsuClient()
