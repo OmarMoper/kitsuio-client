@@ -6,3 +6,5 @@ args = {
     'sort': ['endDate', '-episodeCount'],
     'page': {'limit': 2}
 }
+
+print(client.get('anime', args))
