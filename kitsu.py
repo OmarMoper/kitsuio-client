@@ -1,7 +1,7 @@
 "Kitsu client"
 import http.client
 
-from utils import query
+from .utils import query
 
 
 class KitsuClient():
@@ -17,7 +17,7 @@ class KitsuClient():
         "Make http request to api. Indicate endpoint with {endpoint} and path with {path}. Returns string with last response"
         self.conn.request('GET', self.path + '/' + endpoint + '?' + query.QueryBuilder(args).getHttpQueryString())
         self.last_response = self.conn.getresponse()
-        return self.last_response.read()
+        return self.last_response.read().decode()
 
     def getLastResponse(self):
         "Get last response object (http.client.response)."
