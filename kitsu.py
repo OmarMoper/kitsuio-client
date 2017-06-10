@@ -15,7 +15,8 @@ class KitsuClient():
 
     def get(self, endpoint, args = {}):
         "Make http request to api. Indicate endpoint with {endpoint} and path with {path}. Returns string with last response"
-        self.conn.request('GET', self.path + '/' + endpoint + '?' + query.QueryBuilder(args).getHttpQueryString())
+        url = self.path + '/' + endpoint + '?' + query.QueryBuilder(args).getHttpQueryString()
+        self.conn.request('GET', url)
         self.last_response = self.conn.getresponse()
         return self.last_response.read().decode()
 
